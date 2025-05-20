@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="./assets/index.js">
+        //console.dir(document)
+        const producto = {
+            "nombre" : "Remera",
+            "marca" : "Adidas",
+            "imagen" : "url",
+            "precio" : 100000,
+            "stock" : 5
+        };
+        console.log(`Producto original: \n\t ${producto}`)
+
+        producto.nombre = "Zapatillas";
+        producto.marca = "Converse";
+        producto.categoria = "Calzado";
+        console.log(`Producto modificado: \n\t ${producto}`)
+
+
+        delete producto.stock; console.log(`Producto sin stock: \n\t ${producto}`)
+
+
+    </script>
+</body>
+</html>
