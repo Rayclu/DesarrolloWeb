@@ -1,44 +1,20 @@
-//Desafios 1 a 4
+import { ProductTemplate } from '../dist/productoPlantilla.js';
 
-// const nombreProducto = "Bring me to life"
+function createProduct(name, { stock, price, category }) {
+    return new ProductTemplate(stock, price, name, category);
+}
 
-// const precioUnic =  10000 
-// const cantidad = parseInt(prompt('Cuantas unidades quiere llevar?'))
+document.addEventListener("DOMContentLoaded", () => {
+    const newProductButton = document.getElementById("CreateProductId");
+    if (newProductButton) {
+        newProductButton.addEventListener("click", () => {
+            const productName = prompt("Nombre del producto");
+            const stock = parseInt(prompt("Ingrese el stock"));
+            const price = parseInt(prompt("Ingrese el precio"));
+            const category = prompt("Ingrese la categoría");
 
-// const sumarProductos = (precioUnic, cantidad) => {
-//    const descuento =  cantidad >= 5 ? ((precioUnic * 20)/100) : 0;
-//    return (precioUnic * cantidad) - descuento
-// };
-
-
-// alert(`Usted llevará,${cantidad} unidades de ${nombreProducto} (${precioUnic}), costo total: ${sumarProductos(precioUnic, cantidad)}`)
-
-//-------------------------------------------------------------------------------------------------------------------------------------------------
-//Desafio 6
-
-// const producto = {
-//     "nombre" : "Remera",
-//     "marca" : "Adidas",
-//     "imagen" : "url",
-//     "precio" : 100000,
-//     "stock" : 5
-// };
-// console.log(`Producto original: \n\t ${producto}`)
-
-// producto.nombre = "Zapatillas";
-// producto.marca = "Converse";
-// producto.categoria = "Calzado";
-// console.log(`Producto modificado: \n\t ${producto}`)
-
-
-// delete producto.stock; console.log(`Producto sin stock: \n\t ${producto}`)
-
-// Desafio 7.
-const product = {
-    nombre: document.getElementById("nombreProducto"),
-    precio: document.getElementById("precioProducto")
-};
-console.log(typeof(product));
-product.nombre.style.color = "Red";
-product.precio.innerText = "$450";
-
+            const product = createProduct(productName, { stock, price, category });
+            alert(`El producto es el siguiente: ${JSON.stringify(product)}`);
+        });
+    }
+});
