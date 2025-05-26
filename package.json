@@ -5,7 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "compile": "npx tsc",
-    "watch": "npx tsc --watch"
+    "watch": "npx tsc --watch",
+    "dev": "ts-node-dev --respawn --transpile-only ./assets/productoPlantilla.ts"
   },
   "keywords": [],
   "author": "",

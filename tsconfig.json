@@ -6,7 +6,8 @@
         "rootDir": "./assets",
         "strict": true,
         "moduleResolution": "node",
-        "esModuleInterop": true
+        "esModuleInterop": true,
+        "skipLibCheck": true
     },
     "include": ["./assets/**/*.ts"],
     "exclude": ["node_modules"]

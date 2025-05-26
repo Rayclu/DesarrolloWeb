@@ -1,4 +1,4 @@
-import { ProductTemplate } from '../dist/productoPlantilla.js';
+import { ProductTemplate } from './dist/productoPlantilla.js';
 
 function createProduct(name, { stock, price, category }) {
     return new ProductTemplate(stock, price, name, category);
